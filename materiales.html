@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales - RECECU</title>
+    <link rel="icon" href="statics/img/logo.png" type="icono">
+    <link rel="stylesheet" href="statics/css/estilos.css">
+    <link rel="stylesheet" href="statics/css/materiales.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="statics/img/logo.png" alt="RECECU Logo">
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="materiales.html">Materiales</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="resumen.html">Resumen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="materiales" class="seccion activa">
+            <div class="materiales-header">
+                <h1>Materiales que Reciclamos</h1>
+                <p class="subtitle">Somos expertos en la recolección y procesamiento de diversos tipos de materiales reciclables</p>
+            </div>
+
+            <div class="contenedor">
+                <div class="materiales-grid">
+                    <!-- Papel y Cartón -->
+                    <div class="material-card" data-material="papel">
+                        <div class="material-image">
+                            <img src="https://th.bing.com/th/id/OIP.wIsBKwNZGxhDN4lmcKPhhAHaFR?w=273&h=194&c=7&r=0&o=7&pid=1.7&rm=3" alt="Icono de Papel y Cartón">
+                        </div>
+                        <div class="material-content">
+                            <h3>Papel y Cartón</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">6 tipos</span>
+                                <span class="stat-badge">Altamente reciclable</span>
+                            </div>
+                            <p class="description">Papel de oficina, periódicos, revistas, cajas de cartón, embalajes y productos de papel con fibra larga</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <!-- Plásticos -->
+                    <div class="material-card" data-material="plastico">
+                        <div class="material-image">
+                            <img src="https://static.vecteezy.com/system/resources/previews/024/085/221/original/plastics-object-like-straws-bottle-plastic-bag-plastic-glass-illustration-set-collection-isolated-on-horizontal-white-background-template-simple-flat-drawing-with-outline-cartoon-art-style-free-vector.jpg" alt="Icono de Papel y Cartón">
+                        </div>
+                        <div class="material-content">
+                            <h3>Plásticos</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">7 tipos</span>
+                                <span class="stat-badge">Reutilizable</span>
+                            </div>
+                            <p class="description">PET, HDPE, PVC, LDPE, PP, PS - Botellas, envases, film plástico y empaques</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <!-- Metales -->
+                    <div class="material-card" data-material="metal">
+                        <div class="material-image">
+                            <div class="icon-placeholder"></div>
+                        </div>
+                        <div class="material-content">
+                            <h3>Metales</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">Ferrosos/No ferrosos</span>
+                                <span class="stat-badge">100% reciclable</span>
+                            </div>
+                            <p class="description">Aluminio, cobre, bronce, acero, hierro, chatarra metálica y aleaciones especiales</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <!-- Vidrio -->
+                    <div class="material-card" data-material="vidrio">
+                        <div class="material-image">
+                            <div class="icon-placeholder"></div>
+                        </div>
+                        <div class="material-content">
+                            <h3>Vidrio</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">3 colores</span>
+                                <span class="stat-badge">Infinitamente reciclable</span>
+                            </div>
+                            <p class="description">Botellas, frascos, cristales, vidrio plano, espejos y envases de vidrio</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <!-- Electrónicos -->
+                    <div class="material-card" data-material="electronico">
+                        <div class="material-image">
+                            <div class="icon-placeholder"></div>
+                        </div>
+                        <div class="material-content">
+                            <h3>Electrónicos</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">Peligroso</span>
+                                <span class="stat-badge">Especializado</span>
+                            </div>
+                            <p class="description">Equipos informáticos, electrodomésticos, cables, componentes y aparatos electrónicos obsoletos</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <!-- Textiles -->
+                    <div class="material-card" data-material="textil">
+                        <div class="material-image">
+                            <div class="icon-placeholder"></div>
+                        </div>
+                        <div class="material-content">
+                            <h3>Textiles</h3>
+                            <div class="material-stats">
+                                <span class="stat-badge">Naturales/Sintéticos</span>
+                                <span class="stat-badge">Reutilizable</span>
+                            </div>
+                            <p class="description">Ropa, telas, tejidos, materiales textiles diversos, fibras naturales y sintéticas</p>
+                            <p class="precio">Precio: Consultar</p>
+                            <button class="btn-detalles" onclick="abrirDetalle(this)">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Proceso -->
+            <section class="proceso-reciclaje">
+                <div class="contenedor">
+                    <h2>Nuestro Proceso de Reciclaje</h2>
+                    <div class="proceso-steps">
+                        <div class="paso">
+                            <div class="paso-numero">1</div>
+                            <div class="paso-content">
+                                <h4>Recolección</h4>
+                                <p>Recogemos materiales directamente de tu ubicación</p>
+                            </div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">2</div>
+                            <div class="paso-content">
+                                <h4>Clasificación</h4>
+                                <p>Separamos por tipo y calidad de material</p>
+                            </div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">3</div>
+                            <div class="paso-content">
+                                <h4>Procesamiento</h4>
+                                <p>Procesamos para maximizar valorización</p>
+                            </div>
+                        </div>
+                        <div class="paso">
+                            <div class="paso-numero">4</div>
+                            <div class="paso-content">
+                                <h4>Distribución</h4>
+                                <p>Entregamos a industrias para nueva producción</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+ 
+    <div id="detalleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="footer-info">
+                <p>&copy; 2024 RECECU - Recicladora Ecológica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="statics/js/script.js"></script>
+    <script src="statics/js/materiales.js"></script>
+</body>
+</html>

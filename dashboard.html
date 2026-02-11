@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RECECU</title>
+    <link rel="icon" href="statics/img/logo.png" type="icono">
+    <link rel="stylesheet" href="statics/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-dashboard">
+                    <span class="logo-icon">|||</span>
+                    <span class="logo-text">RECECU</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item active">
+                    <span class="icon">⊞</span>
+                    <span>Resumen</span>
+                </div>
+                <div class="menu-item">
+                    <span>Clientes</span>
+                </div>
+                <div class="menu-item">
+                    <span>Asunto</span>
+                </div>
+                <div class="menu-item">
+                    <span>Timesheets</span>
+                </div>
+                <div class="menu-item">
+                    <span>Timepasses</span>
+                </div>
+                <div class="menu-item">
+                    <span>Invoices</span>
+                </div>
+                <div class="menu-item">
+                    <span>Disbursement</span>
+                </div>
+                <div class="menu-item">
+                    <span>Timesheet Report</span>
+                </div>
+                <div class="menu-item">
+                    <span>Business Report</span>
+                </div>
+                <div class="menu-item">
+                    <span>Work Request</span>
+                </div>
+                <div class="menu-item">
+                    <span>Configuration</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="menu-item">
+                    <span>Feedback</span>
+                </div>
+                <div class="menu-item">
+                    <span class="icon">⚙</span>
+                    <span>Setting</span>
+                </div>
+                <div class="user-profile">
+                    <img src="img/user-avatar.png" alt="User">
+                    <span>Shahid Miah</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="topbar">
+                <div class="topbar-left">
+                    <h1>Metrics overview</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="btn-search">🔍</button>
+                    <button class="btn-add">+</button>
+                    <button class="btn-available">● Available</button>
+                    <button class="btn-time">00:00:00</button>
+                </div>
+            </div>
+            
+            <div class="metrics-cards">
+                <div class="metric-card">
+                    <div class="metric-label">Total Matters</div>
+                    <div class="metric-value">5,245</div>
+                    <div class="metric-change positive">+2.5% ▲</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-label">Time At Client Co</div>
+                    <div class="metric-value">15,478</div>
+                    <div class="metric-change positive">+1.8% ▲</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-label">Time Recorded</div>
+                    <div class="metric-value">1000.4/hr</div>
+                    <div class="metric-change negative">-2.0% ▼</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-label">Total Revenue</div>
+                    <div class="metric-value">$ 20,949</div>
+                    <div class="metric-change positive">+3.2% ▲</div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Time Recordings</h3>
+                            <button class="btn-more">⋯</button>
+                        </div>
+                        
+                        <table class="time-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Client name</th>
+                                    <th>Time Rec</th>
+                                    <th>Matter title</th>
+                                </tr>
+                            </thead>
+                            <tbody id="time-recordings-body">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Matter List</h3>
+                        </div>
+                        
+                        <table class="matter-table">
+                            <thead>
+                                <tr>
+                                    <th>DMS Code</th>
+                                    <th>Matter Title</th>
+                                    <th>Client Name</th>
+                                    <th>Date opened</th>
+                                    <th>Last timesheet</th>
+                                    <th>Budget</th>
+                                    <th>Solicitor</th>
+                                    <th>Practice area</th>
+                                </tr>
+                            </thead>
+                            <tbody id="matter-list-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="content-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Total Hours</h3>
+                            <select class="select-period">
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                                <option>Yearly</option>
+                            </select>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="line-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Total Hours</h3>
+                            <select class="select-period">
+                                <option>Monthly</option>
+                                <option>Weekly</option>
+                                <option>Yearly</option>
+                            </select>
+                        </div>
+                        
+                        <div class="hours-summary">
+                            <div class="hours-item">
+                                <span class="hours-label">🔵 Billable</span>
+                                <span class="hours-value">48/hr</span>
+                                <span class="hours-percent">$1M</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-label">⚪ Non-billable</span>
+                                <span class="hours-value">32/hr</span>
+                                <span class="hours-percent">$32k</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-label">🟠 Contract writing</span>
+                                <span class="hours-value">16/hr</span>
+                                <span class="hours-percent">$16k</span>
+                            </div>
+                        </div>
+                        
+                        <div class="donut-chart-container">
+                            <canvas id="donut-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="statics/js/dashboard.js"></script>
+</body>
+</html>

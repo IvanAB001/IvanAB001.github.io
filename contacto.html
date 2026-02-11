@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - RECECU</title>
+    <link rel="stylesheet" href="statics/css/estilos.css">
+    <link rel="icon" href="statics/img/logo.png" type="icono">
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="statics/img/logo.png" alt="RECECU Logo">
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="materiales.html">Materiales</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="resumen.html">Resumen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="contacto" class="seccion activa">
+            <div class="contenedor">
+                <h2>Contacto</h2>
+                
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="info-item">
+                            <h4>Dirección</h4>
+                            <p>Av. Industrial 1234<br>
+                            Zona Industrial Norte<br>
+                            Ciudad, País</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Teléfonos</h4>
+                            <p>Oficina: +1 (555) 123-4567<br>
+                            Celular: +1 (555) 987-6543</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p>info@rececu.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-form">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="formulario-contacto">
+                            <div class="form-group">
+                                <label>Nombre:</label>
+                                <input type="text" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Teléfono:</label>
+                                <input type="tel" name="telefono">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Asunto:</label>
+                                <input type="text" name="asunto" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Mensaje:</label>
+                                <textarea name="mensaje" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="footer-info">
+                <p>&copy; 2024 RECECU - Recicladora Ecológica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="statics/js/script.js"></script>
+</body>
+</html>
